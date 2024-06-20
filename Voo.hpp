@@ -6,9 +6,11 @@ class Voo{
     string origem;
     string destino;
     int num_assentos;
+    int preço;
     vector<bool>assentos;
     public:
-    Voo(const string& _origem,const string& _destino,int _num_assentos,vector<bool>_assentos);
+    Voo(const string& _origem,const string& _destino,int _num_assentos,vector<bool>_assentos,int _preço);
+    int GetPreço();
     bool Checar_assentos();
 
     
