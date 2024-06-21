@@ -1,7 +1,9 @@
 #include "Voo.hpp"
 using namespace std;
-Voo::Voo(const string& _origem,const string& _destino,int _num_assentos,vector<bool>_assentos,int _preço)
-        :origem(_origem),destino(_destino),num_assentos(_num_assentos),assentos(_assentos),preço(_preço){}
+Voo::Voo(Gerenciador_Sistema* sistema,const string& _origem,const string& _destino,int _horas,int _minutos,int _num_assentos,vector<bool>_assentos,int _preço)
+        :origem(_origem),destino(_destino),horas(_horas),minutos(_minutos),num_assentos(_num_assentos),assentos(_assentos),preço(_preço){
+            sistema->adicionar_voo(*this);
+        }
 int Voo::GetPreço(){
     return preço;
 }
