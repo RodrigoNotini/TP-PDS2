@@ -1,5 +1,15 @@
 #include "gerenciador_sistema.hpp"
 #include <algorithm>
+void::Gerenciador_Sistema::adicionar_usuario(Usuario& usuario){
+    Usuarios.pushback(usuario);
+}
+
+void::Gerenciador_Sistema::adicionar_voo(Voo& voo){
+    Voos.pushback(voo);
+}
+void::Gerenciador_Sistema::adicionar_pagamento(Pagamento& pagamento){
+    Pagamentos.pushback(pagamento);
+}
 void Gerenciador_Sistema::remover_usuario(string nome_remov){
     auto it = Usuarios.begin();
         while (it != Usuarios.end()) {
@@ -26,4 +36,10 @@ void Gerenciador_Sistema::remover_pagamento(int _id){
     } else {
         std::cout << "Pagamento com ID " << _id << " não encontrado." << std::endl;
     }
+}
+vector<Pagamento>* Gerenciador_Sistema::GetPagamentos() {
+    return &Pagamentos;
+}
+string Gerenciador_Sistema::MostrarHorários(){
+
 }
