@@ -126,3 +126,15 @@ g++ -I include/ tests/UserTest.cpp src/User.cpp -o bin/UserTest
           - Preço
         Colaborações:
           - Sistema
+
+    Descrição da modelagem:
+      Classe Sistema:
+        -Classe que gerencia, armazena e modifica as informações que compõe o sistema de controle de voos, como usuários, voos e pagamentos
+
+      Classe Pagamento:
+        -Classe responsável por gerenciar os pagamentos e transações de usuários relacionados às passagens
+
+      Classe Usuário:
+        -Classe que cria, armazena e altera informações específicas de cada usuário
+      Classe Voo:
+        -Classe responsável por armazenar as informações de cada voo e características relacionadas a ele
