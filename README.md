@@ -62,3 +62,67 @@ g++ -I include/ tests/UserTest.cpp src/User.cpp -o bin/UserTest
 
 
 5-Instruções de uso:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  -Modelagem do Sisitema:
+    
+    Modelagem baseada em cartões CRC:
+      Classe: Sistema
+        Responsabilidades:
+          - Adicionar Usuário
+          - Adicionar Pagamento
+          - Adicionar Voo
+          - Remover Usuário
+          - Remover Pagamento
+        Colaborações:
+          - Pagamento
+          - Usuário
+          - Voo
+      Classe: Pagamento
+        Responsabilidades:
+          - Comprar Passagem
+          - Preço
+          - Reembolso
+          - Pagador
+          - Situação do Pagamento
+        Colaborações:
+          - Sistema
+          - Voo
+          - Usuário
+      Classe: Usuário
+        Responsabilidades:
+          - Nome
+          - email
+          - Senha
+          - ID
+          - Saldo
+          - Trocar Nome
+          - Trocar Senha
+        Colaborações:
+          - Sistema
+      Classe: Voo
+        Responsabilidades:
+          - Origem
+          - Destino
+          - Horário do Voo
+          - Assentos
+          - Preço
+        Colaborações:
+          - Sistema
