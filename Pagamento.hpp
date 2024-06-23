@@ -1,6 +1,6 @@
 #include <string>
 #include"Voo.hpp"
-#include"Usuario.hpp"
+
 using namespace std;
 class Pagamento{
     private:
@@ -9,7 +9,7 @@ class Pagamento{
     int id_pagamento;
     int preço_pagamento;
     public:
-    Pagamento(Gerenciador_Sistema sistema,bool _sit_pagamento,const string& _forma_pagamento,int _id_pagamento,int _preço_pagamento);
+    Pagamento(bool _sit_pagamento,const string& _forma_pagamento,int _id_pagamento,int _preço_pagamento);
     int GetPreço_Pagamento();
     int GetId ();
     void Comprar_Passagem(Usuario* cliente,Voo* voo_desejado,string _forma_pagamento);
