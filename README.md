@@ -14,11 +14,11 @@ Nos últimos anos, o setor de aviação tem experimentado um crescimento signifi
 Para enfrentar os desafios mencionados na gestão de reservas de passagens aéreas, propomos o desenvolvimento de um Sistema de Reserva de Passagens Aéreas eficiente e intuitivo. Este sistema será projetado para atender tanto às necessidades dos passageiros quanto das companhias aéreas, proporcionando uma experiência de reserva otimizada e integrada. Abaixo, destacamos a estrutura geral do programa e seu funcionamento básico.
 1-Classe Usuário: Nessa classe, serão introduzidos dados sobre o usuário como nome, e-mail, id(número associado ao passageiro no sistema) e senha.
 2-Classe Voo:Representa um voo, incluindo detalhes como origem, destino, data, hora, preço e disponibilidade.
-3-Classe Reserva: Gerencia as reservas feitas pelos usuários, incluindo dados do voo e status da reserva.
-4-Classe Pagamento:Lida com os detalhes de pagamento para as reservas.
-5-Classe Serviço_Consumidor : Gerencia as interações de suporte ao cliente.
-6-Classe Gerenciador_Sistema: Centraliza a gestão de voos, reservas, pagamentos e suporte ao cliente.
+3-Classe Pagamento:Lida com os detalhes de pagamento para as reservas.
+4-Classe Serviço_Consumidor : Gerencia as interações de suporte ao cliente.
+5-Classe Gerenciador_Sistema: Centraliza a gestão de voos, reservas, pagamentos e suporte ao cliente.
 
+//Sendo cada uma dessas classes um dos requerimentos que o programa deve ter.
 
 
 3-Estrutura Do Projeto:A estrutura de diretórios do projeto de Sistema de Reserva de Passagens Aéreas deve ser organizada de maneira clara e lógica para facilitar a navegação, desenvolvimento e manutenção.
@@ -62,6 +62,37 @@ g++ -I include/ tests/UserTest.cpp src/User.cpp -o bin/UserTest
 
 
 5-Instruções de uso:
+Exemplos de Uso:
+
+
+Cadastrar Usuário:
+Escolha "cadastrar".
+Digite o nome, email, ID, senha e saldo do novo usuário quando solicitado.
+Após confirmar os dados, o usuário será cadastrado e você verá uma mensagem de confirmação.
+
+
+Trocar Senha:
+Escolha "trocar_senha".
+Informe o ID do usuário, a senha atual e a nova senha desejada.
+Se o usuário existir e a senha atual estiver correta, a senha será atualizada com sucesso.
+
+
+
+Expansão Futura:
+Além das funcionalidades atuais de cadastro de usuários, troca de senha e troca de nome implementaremos diversas outras funcionalidades para proporcionar aos usuários uma experiência completa, fácil e eficiente. Algumas dessas novas funcionalidades são:
+
+Compra de Passagens:
+Os usuários poderão selecionar voos disponíveis, escolher assentos e efetuar a compra de passagens diretamente pelo sistema.
+
+Reembolso de Passagens:
+Dependendo da política de reembolso associada à forma de pagamento utilizada (como cartão de crédito), os usuários poderão solicitar o reembolso de passagens canceladas.
+
+Consulta de Horários de Voos:
+Os horários dos voos serão disponibilizados para consulta, mostrando quais voos estão disponíveis e quais possuem assentos livres.
+
+Suporte ao Cliente:
+Disponibilização de um sistema de suporte ao cliente para ajudar os usuários com dúvidas, problemas com reservas ou assistência durante viagens.
+
 
 
 
