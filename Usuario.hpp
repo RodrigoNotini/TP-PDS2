@@ -1,9 +1,7 @@
 #include <string>
-#include "Gerenciador_sistema.hpp"
+#include <iostream>
+
 using namespace std;
-
-
-
 
 class Usuario{
     private:
@@ -13,12 +11,14 @@ class Usuario{
     int id;
     int saldo;
     public:
-    Usuario(Gerenciador_Sistema sistema,const string& _nome, const string& _gmail, int _id, int _senha,int _saldo);//construtor
+    Usuario(const string& _nome, const string& _gmail, int _id, int _senha,int _saldo);//construtor
     string GetNome();
+    string MostrarSaldo();
+    int GetSenha();
+    int GetId();
     int GetSaldo();
     void Setsaldo(int valor);
     void PerdeSaldo(int valor);
-    void Trocar_Senha(int senha_atual, int nova_senha);
-    void Trocar_Nome(string novo_nome);//nao precisa saber o nome antigo se quer mudar nome
-
+    void Trocar_Senha(int senha_atual, int nova_senha); //precisa saber a senha antiga
+    void Trocar_Nome(string novo_nome,int senha);//nao precisa saber o nome antigo se quer mudar nome
 };
