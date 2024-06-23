@@ -1,6 +1,6 @@
 #include <string>
 #include <vector>
-#include "Gerenciador_sistema.hpp"
+//problemas com nome//função nao chamando estao relacionados a problemas de include
 using namespace std;
 class Voo{
     private:
@@ -12,12 +12,9 @@ class Voo{
     int preço;
     vector<bool>assentos;
     public:
-    Voo(Gerenciador_Sistema* sistema,const string& _origem,const string& _destino,int _horas,int _minutos,int _num_assentos,vector<bool>_assentos,int _preço);
+    Voo(const string& _origem,const string& _destino,int _horas,int _minutos,int _num_assentos,vector<bool>_assentos,int _preço);
+    int GetHoras();
+    int GetMinutos();
     int GetPreço();
     bool Checar_assentos();
-
-    
-
-
-
 };
