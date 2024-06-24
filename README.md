@@ -18,6 +18,7 @@ Sistema de Reserva de Passagens Aéreas
 Para enfrentar os desafios mencionados na gestão de reservas de passagens aéreas, propomos o desenvolvimento de um Sistema de Reserva de Passagens Aéreas eficiente e intuitivo. Este sistema será projetado para atender tanto às necessidades dos passageiros quanto das companhias aéreas, proporcionando uma experiência de reserva otimizada e integrada. Abaixo, destacamos a modelagem do programa e seu funcionamento básico.
 
 Descrição da modelagem:
+
       Classe Sistema:
         -Classe que gerencia, armazena e modifica as informações que compõe o sistema de controle de voos, como usuários, voos e pagamentos
 
