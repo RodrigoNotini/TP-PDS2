@@ -158,6 +158,12 @@ Disponibilização de um sistema de suporte ao cliente para ajudar os usuários 
           - Preço
         Colaborações:
           - Sistema
+      Classe: SAC
+        Responsabilidades:
+          - Adicionar Avaliação
+          - Mostrar Avaliação
+          - Calcular Nota
+        Colaborações
 
     Descrição da modelagem:
       Classe Sistema:
