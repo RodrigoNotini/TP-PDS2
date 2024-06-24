@@ -2,8 +2,8 @@
 Trabalho Prático PDS2:
 Sistema de Reserva de Passagens Aéreas
 
-1-Apresentação do Problema
-Nos últimos anos, o setor de aviação tem experimentado um crescimento significativo, tanto em termos de passageiros transportados quanto de novas rotas aéreas inauguradas. Esse crescimento é impulsionado pelo aumento da demanda por viagens, seja a negócios ou lazer, e pela globalização, que tem tornado o mundo cada vez mais interconectado. No entanto, com o aumento do número de passageiros e a complexidade das operações aéreas, surgem diversos desafios relacionados à gestão eficiente de reservas de passagens aéreas.
+1-Apresentação do Problema:
+ Nos últimos anos, o setor de aviação tem experimentado um crescimento significativo, tanto em termos de passageiros transportados quanto de novas rotas aéreas inauguradas. Esse crescimento é impulsionado pelo aumento da demanda por viagens, seja a negócios ou lazer, e pela globalização, que tem tornado o mundo cada vez mais interconectado. No entanto, com o aumento do número de passageiros e a complexidade das operações aéreas, surgem diversos desafios relacionados à gestão eficiente de reservas de passagens aéreas.
 
 1-Disponibilidade e Preço: Os passageiros precisam encontrar passagens que sejam compatíveis com seus horários e condição financeira.
 
@@ -40,7 +40,8 @@ Descrição da modelagem:
 
 //Sendo cada uma dessas classes um dos requerimentos que o programa deve ter.
 
-         Modelagem baseada em cartões CRC:
+Modelagem baseada em cartões CRC:
+
       Classe: Sistema
         Responsabilidades:
           - Adicionar Usuário
