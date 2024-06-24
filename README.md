@@ -163,7 +163,15 @@ Disponibilização de um sistema de suporte ao cliente para ajudar os usuários 
           - Adicionar Avaliação
           - Mostrar Avaliação
           - Calcular Nota
-        Colaborações
+        Colaborações:
+          - Usuário
+          - Avaliação
+      Classe: Avaliação
+        Responsabilidades:
+          - Nota
+          - Comentário
+        Colaborações:
+          - 
 
     Descrição da modelagem:
       Classe Sistema:
