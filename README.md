@@ -127,29 +127,29 @@ Bibliotecas Adicionais: Nenhuma específica além das bibliotecas padrão do C++
 
 Passos de Instalação
 
-1-Atualize o Sistema:
+a)Atualize o Sistema:
 
 Certifique-se de que seu sistema está atualizado.
 
-2-Instale o Compilador C++:
+b)Instale o Compilador C++:
 Para sistemas Linux, instale o GCC ou Clang.
 Para macOS, você pode usar o Xcode Command Line Tools.
 Para Windows, instale o MinGW ou use o Visual Studio com suporte a C++.
 
-3-Clone o Repositório do Projeto:
+c)Clone o Repositório do Projeto:
 Clone o repositório do projeto para o seu ambiente local.
 git clone https://github.com/seu-usuario/AirlineReservationSystem.git
 cd AirlineReservationSystem
 
-4-Compilação Manual:
+d)Compilação Manual:
 Compile os arquivos fonte e gere o executável. Você pode usar um único comando g++ para compilar todos os arquivos.
 g++ -I include/ src/*.cpp -o bin/airline_reservation_system
 
-5-Executar o Sistema:
+e)Executar o Sistema:
 Após a compilação bem-sucedida, execute o sistema.
 ./bin/airline_reservation_system
 
-6-Compilação e Execução de Testes:
+f)Compilação e Execução de Testes:
 Compile e execute os testes individualmente ou todos de uma vez. Aqui está um exemplo de como compilar e executar um teste.
 g++ -I include/ tests/UserTest.cpp src/User.cpp -o bin/UserTest
 ./bin/UserTest
