@@ -15,8 +15,9 @@ Para enfrentar os desafios mencionados na gestão de reservas de passagens aére
 1-Classe Usuário: Nessa classe, serão introduzidos dados sobre o usuário como nome, e-mail, id(número associado ao passageiro no sistema) e senha.
 2-Classe Voo:Representa um voo, incluindo detalhes como origem, destino, data, hora, preço e disponibilidade.
 3-Classe Pagamento:Lida com os detalhes de pagamento para as reservas.
-4-Classe Serviço_Consumidor : Gerencia as interações de suporte ao cliente.
-5-Classe Gerenciador_Sistema: Centraliza a gestão de voos, reservas, pagamentos e suporte ao cliente.
+4-Classe Avaliação:A classe Avaliacao representa uma avaliação de serviço fornecida por um usuário. Ela encapsula as informações relevantes de uma avaliação, como o ID do usuário, um comentário e uma nota.
+5-Classe Serviço_Consumidor : A classe Servico_Consumidor gerencia as avaliações de serviço recebidas dos usuários. Ela oferece funcionalidades para adicionar novas avaliações, calcular a média das notas e exibir todas as avaliações.
+6-Classe Gerenciador_Sistema: Centraliza a gestão de voos, reservas, pagamentos e suporte ao cliente.
 
 //Sendo cada uma dessas classes um dos requerimentos que o programa deve ter.
 
