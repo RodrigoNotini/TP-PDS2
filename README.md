@@ -96,23 +96,6 @@ Disponibilização de um sistema de suporte ao cliente para ajudar os usuários 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   -Modelagem do Sisitema:
     
     Modelagem baseada em cartões CRC:
@@ -171,7 +154,7 @@ Disponibilização de um sistema de suporte ao cliente para ajudar os usuários 
           - Nota
           - Comentário
         Colaborações:
-          - 
+          - Usuário
 
     Descrição da modelagem:
       Classe Sistema:
@@ -179,8 +162,15 @@ Disponibilização de um sistema de suporte ao cliente para ajudar os usuários 
 
       Classe Pagamento:
         -Classe responsável por gerenciar os pagamentos e transações de usuários relacionados às passagens
-
+        
       Classe Usuário:
         -Classe que cria, armazena e altera informações específicas de cada usuário
+        
       Classe Voo:
         -Classe responsável por armazenar as informações de cada voo e características relacionadas a ele
+        
+      Classe SAC:
+        -Classe que faz o papel do serviço de atendimento ao consumidor, calculando, armazenando e exibindo as notas do serviço dadas pelo usuário
+
+      Classe Avaliação:
+        -Essa classe processa as notas e comentários da avaliação do usuário, que serão mostradas no serviço de atendimento ao consumidor
