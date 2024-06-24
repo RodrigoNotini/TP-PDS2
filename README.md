@@ -14,8 +14,9 @@ Sistema de Reserva de Passagens Aéreas
 4-Serviço ao Cliente: A qualidade do serviço ao cliente é crucial, especialmente quando surgem problemas com reservas, atrasos ou cancelamentos. Um sistema ineficaz pode levar a uma experiência negativa para os passageiros.
 
 
-2-Visão Geral da Solução
-Para enfrentar os desafios mencionados na gestão de reservas de passagens aéreas, propomos o desenvolvimento de um Sistema de Reserva de Passagens Aéreas eficiente e intuitivo. Este sistema será projetado para atender tanto às necessidades dos passageiros quanto das companhias aéreas, proporcionando uma experiência de reserva otimizada e integrada. Abaixo, destacamos a modelagem do programa e seu funcionamento básico.
+
+2-Visão Geral da Solução:
+ Para enfrentar os desafios mencionados na gestão de reservas de passagens aéreas, propomos o desenvolvimento de um Sistema de Reserva de Passagens Aéreas eficiente e intuitivo. Este sistema será projetado para atender tanto às necessidades dos passageiros quanto das companhias aéreas, proporcionando uma experiência de reserva otimizada e integrada. Abaixo, destacamos a modelagem do programa e seu funcionamento básico.
 
 Descrição da modelagem:
 
