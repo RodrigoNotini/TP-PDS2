@@ -1,4 +1,5 @@
 #include "usuario.hpp"
+#include <iostream>
 using namespace std;
 
 // Construtor da classe Usuario
@@ -11,7 +12,7 @@ string Usuario::MostrarSaldo() {
     cout << "Seu saldo é: " << saldo << endl;
 }
 
-// Métodos Get para retornar informações do usuário
+// Métodos Get para retornar informacoes do usuário
 
 // Retorna a senha do usuário
 int Usuario::GetSenha() {
@@ -65,5 +66,3 @@ void Usuario::Trocar_Nome(string novo_nome, int _senha) {
         nome = novo_nome;
     }
 }
-
-
