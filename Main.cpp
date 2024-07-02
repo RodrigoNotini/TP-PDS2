@@ -6,6 +6,8 @@
 #include "Gerenciador_sistema.hpp"
 #include "Pagamento.hpp"
 
+//teste
+
 using namespace std;
 
 int main() {
