@@ -1,33 +1,38 @@
 #include "Voo.hpp"
+#include <vector>
+#include <string>
 using namespace std;
-//construtor
-Voo::Voo(const string& _origem,const string& _destino,int _horas,int _minutos,int _num_assentos,vector<bool>_assentos,int _preco,int _id_voo)
-        :origem(_origem),destino(_destino),horas(_horas),minutos(_minutos),num_assentos(_num_assentos),assentos(_assentos),preco(_preco),id_voo(_id_voo){ 
-        }
-//retorna o horario em horas do voo
-int Voo::GetHoras(){
+
+// Construtor
+Voo::Voo(const string& _origem, const string& _destino, int _horas, int _minutos, int _num_assentos, vector<bool> _assentos, int _preco, int _id_voo)
+    : origem(_origem), destino(_destino), horas(_horas), minutos(_minutos), num_assentos(_num_assentos), assentos(_assentos), preco(_preco), id_voo(_id_voo) {}
+
+// Retorna o horário em horas do voo
+int Voo::GetHoras() const {
     return horas;
 }
-//retorna o horario em minutos do voo
-int Voo::GetMinutos(){
+
+// Retorna o horário em minutos do voo
+int Voo::GetMinutos() const {
     return minutos;
 }
-//retorna o preço do Voo
-int Voo::GetPreco(){
+
+// Retorna o preço do voo
+int Voo::GetPreco() const {
     return preco;
 }
-int Voo::GetId_Voo(){
+
+// Retorna o ID do voo
+int Voo::GetId_Voo() const {
     return id_voo;
 }
 
-//função para checar a disponibilidade de assentos
-bool Voo::Checar_assentos() {
-        auto it= assentos.begin();
-        while (it != assentos.end()) {
-            if (*it != 1) {
-                return false;  // Retorna falso se encontrar um assento não ocupado
-            }
-            it++;  // Avança para o próximo assento
+// Função para checar a disponibilidade de assentos
+bool Voo::Checar_assentos() const {
+    for (bool assento : assentos) {
+        if (!assento) {
+            return false;  // Retorna falso se encontrar um assento disponível
         }
-        return true;  // Retorna verdadeiro se todos os assentos estiverem ocupados
-    };
+    }
+    return true;  // Retorna verdadeiro se todos os assentos estiverem ocupados
+}
