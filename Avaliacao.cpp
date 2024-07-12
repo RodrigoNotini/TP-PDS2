@@ -7,8 +7,8 @@
  */
 Avaliacao::Avaliacao(int _idUsuario, const std::string& _comentario, int _nota)
     : idUsuario(_idUsuario), comentario(_comentario) {
-    if (_nota < 0 || _nota > 10) {
-        throw std::invalid_argument("Nota deve estar entre 0 e 10.");
+    if (_nota < 0 || _nota > 5) {
+        throw std::invalid_argument("Nota deve estar entre 0 e 5.");
     }
     nota = _nota;
 }
