@@ -13,6 +13,19 @@ void Gerenciador_Sistema::adicionar_usuario(Usuario& usuario){
     Usuarios.push_back(usuario);
 }
 
+vector<Voo>& Gerenciador_Sistema::GetVoos() {
+    return Voos;
+}
+
+const std::vector<Voo>& Gerenciador_Sistema::getVoos() const {
+    return voos;
+}
+
+
+void Gerenciador_Sistema::adicionar_pagamento(Pagamento& pagamento) {
+    Pagamentos.push_back(pagamento);
+}
+
 // Remove um usuário pelo nome
 void Gerenciador_Sistema::remover_usuario(string nome_remov){
     auto it = Usuarios.begin();
@@ -58,7 +71,7 @@ string Gerenciador_Sistema::MostrarHorarios(){
 void Gerenciador_Sistema::MostrarIdVoos(){
     cout<<"Os horarios de voo disponiveis sao: "<<endl;
     for(auto it:Voos){
-        cout<<it.GetId_Voo()<<endl;
+        cout<<it.GetIdVoo()<<endl;
     }
 }
 bool Gerenciador_Sistema::ConfereReembolso(Pagamento* pagamento){
@@ -69,7 +82,7 @@ bool Gerenciador_Sistema::ConfereReembolso(Pagamento* pagamento){
     }
 }
 void Gerenciador_Sistema::adicionar_voo(Voo& voo){
-    Voos.push_back(voo);
+    voos.push_back(voo);
 }
 
 void Gerenciador_Sistema::criarVoosDeTeste() {
@@ -107,3 +120,4 @@ void Gerenciador_Sistema::criarVoosDeTeste() {
 
     cout << "Voos de teste criados e adicionados ao sistema." << endl;
 }
+
