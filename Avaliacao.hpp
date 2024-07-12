@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <stdexcept> // Incluindo o cabeçalho para exceções padrão como std::invalid_argument
 
 using namespace std;
 
@@ -12,25 +13,12 @@ private:
 
 public:
     // Construtor com validações
-    Avaliacao(int _idUsuario, const string& _comentario, int _nota) 
-        : idUsuario(_idUsuario), comentario(_comentario), nota(_nota) {
-        if (_nota < 0 || _nota > 5) {
-            throw invalid_argument("Nota deve estar entre 0 e 5");
-        }
-    }
+    Avaliacao(int _idUsuario, const string& _comentario, int _nota);
 
     // Métodos 'get'
-    int GetId() const {
-        return idUsuario;
-    }
-
-    string GetComentario() const {
-        return comentario;
-    }
-
-    int GetNota() const {
-        return nota;
-    }
+    int GetId() const noexcept;
+    string GetComentario() const;
+    int GetNota() const noexcept;
 
     // Métodos 'set' com validações
     void SetId(int _idUsuario) {
