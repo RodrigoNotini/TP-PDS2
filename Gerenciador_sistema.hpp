@@ -14,6 +14,7 @@ private:
     vector<Usuario> Usuarios;
     vector<Pagamento> Pagamentos;
     vector<Voo> Voos;
+    vector<Voo> voos;
 
 public:
     vector<Usuario>& GetUsuarios();
@@ -26,6 +27,9 @@ public:
     bool ConfereReembolso(Pagamento* pagamento);
     void adicionar_voo(Voo& voo);
     void criarVoosDeTeste();
+    const vector<Voo>& getVoos() const;
+    vector<Voo>& GetVoos();
+    void adicionar_pagamento(Pagamento& pagamento);
 };
 
 #endif
