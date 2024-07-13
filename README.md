@@ -122,6 +122,8 @@ Clique no canto inferior esquerdo em "command pallet", depois pesquise por git:c
 Ou abra o gitbash, va para o diretorio onde deseja armazenar o projeto e utilize o comando:
 git clone https://github.com/RodrigoNotini/TP-PDS2.git
 
+Depois disso, crie uma pasta chamada src, que irá conter os arquivos (.cpp) e (.hpp) e outra pasta chamada bin, que irá conter os executáveis do projeto.
+
 
 Compilação:
 
