@@ -103,6 +103,8 @@ Abaixo estão as instruções detalhadas para instalar e configurar o Sistema de
 Requisitos de Sistema:
 Sistema Operacional: Linux, macOS ou Windows
 Compilador C++: GCC 7.0+ ou Clang 5.0+ (para Linux/macOS), MinGW ou Visual Studio (para Windows)
+Git
+Visual Studio Code
 Bibliotecas Adicionais: Nenhuma específica além das bibliotecas padrão do C++
 Passos de Instalação:
 Atualize o Sistema:
