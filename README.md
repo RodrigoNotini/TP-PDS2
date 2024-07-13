@@ -93,10 +93,9 @@ Usuário
 3. Estrutura do Projeto:
 A estrutura de diretórios do projeto de Sistema de Reserva de Passagens Aéreas deve ser organizada de maneira clara e lógica para facilitar a navegação, desenvolvimento e manutenção.
 
-SistemaDeReservasAéreas/: 
+TP-PDS2/: 
   bin/: Contém os executáveis gerados após a compilação do projeto.
-  include/: Contém os arquivos de cabeçalho (.h) que definem as interfaces das classes e funções.
-  src/: Contém os arquivos de implementação (.cpp) que definem a lógica das classes e funções.
+  src/: Contém os arquivos de implementação (.cpp) que definem a lógica das classes e funções e os cabeçalhos (.hpp).
 4. Instruções de Instalação:
 Abaixo estão as instruções detalhadas para instalar e configurar o Sistema de Reserva de Passagens Aéreas em um ambiente de desenvolvimento. Estas instruções cobrem as dependências e os requisitos de sistema necessários para compilar e executar o projeto.
 
@@ -117,57 +116,146 @@ Para macOS, você pode usar o Xcode Command Line Tools.
 Para Windows, instale o MinGW ou use o Visual Studio com suporte a C++.
 Clone o Repositório do Projeto:
 
-Clone o repositório do projeto para o seu ambiente local.
+Clone o repositório do projeto no Visual studio code
+Clique no canto inferior esquerdo em "command pallet", depois pesquise por git:clone e utilize o link https://github.com/RodrigoNotini/TP-PDS2
 
-git clone https://github.com/seu-usuario/AirlineReservationSystem.git
-cd AirlineReservationSystem
+Ou abra o gitbash, va para o diretorio onde deseja armazenar o projeto e utilize o comando:
+git clone https://github.com/RodrigoNotini/TP-PDS2.git
+
+
+Compilação:
+
+Opção 1:
+
 Compilação Manual:
 
 Compile os arquivos fonte e gere o executável. Você pode usar um único comando c++ para compilar todos os arquivos.
 
-c++ -I include/ src/*.cpp -o bin/airline_reservation_system
+g++ src\*.cpp -o bin\executavel
+
+Opção 2:
+
+tasks.json:
+
+Para compilar o projeto utilizando o tasks.json do Visual Studio Code, você pode configurar uma tarefa de compilação. Aqui está um exemplo de como você pode configurar o tasks.json para compilar todos os arquivos .cpp na pasta src e gerar o executável na pasta bin:
+
+Navegue até a pasta .vscode dentro da pasta do projeto.
+Abra (ou crie) o arquivo tasks.json.
+Aqui está um exemplo de como configurar o tasks.json:
+
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar Projeto",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "src/*.cpp",
+                "-o",
+                "bin/executavel"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compilar todos os arquivos .cpp na pasta src e gerar o executável na pasta bin"
+        }
+    ]
+}
+
+
+
 Executar o Sistema:
 
 Após a compilação bem-sucedida, execute o sistema.
 
-./bin/airline_reservation_system
+./bin/TP-PDS2
 Compilação e Execução de Testes:
 
-Compile e execute os testes individualmente ou todos de uma vez. Aqui está um exemplo de como compilar e executar um teste.
+Compile e teste as funcionalidades disponíveis no programa.
 
-c++ -I include/ tests/UserTest.cpp src/User.cpp -o bin/UserTest
-./bin/UserTest
 5. Instruções de Uso:
 Exemplos de Uso:
-Cadastrar Usuário:
-
+Função: Cadastrar Usuário:
 Escolha "cadastrar".
 Digite o nome, email, ID, senha e saldo do novo usuário quando solicitado.
 Após confirmar os dados, o usuário será cadastrado e você verá uma mensagem de confirmação.
-Trocar Senha:
-
-Escolha "trocar_senha".
-Informe o ID do usuário, a senha atual e a nova senha desejada.
-Se o usuário existir e a senha atual estiver correta, a senha será atualizada com sucesso.
-6. Expansão Futura:
-Além das funcionalidades atuais de cadastro de usuários, troca de senha e troca de nome, implementaremos diversas outras funcionalidades para proporcionar aos usuários uma experiência completa, fácil e eficiente. Algumas dessas novas funcionalidades são:
-
-Compra de Passagens:
-
-Os usuários poderão selecionar voos disponíveis, escolher assentos e efetuar a compra de passagens diretamente pelo sistema.
-Reembolso de Passagens:
-
-Dependendo da política de reembolso associada à forma de pagamento utilizada (como cartão de crédito), os usuários poderão solicitar o reembolso de passagens canceladas.
-Consulta de Horários de Voos:
-
-Os horários dos voos serão disponibilizados para consulta, mostrando quais voos estão disponíveis e quais possuem assentos livres.
-Suporte ao Cliente:
-
-Disponibilização de um sistema de suporte ao cliente para ajudar os usuários com dúvidas, problemas com reservas ou assistência durante viagens.
-Agora o README inclui as descrições das classes Avaliação e SAC e está ajustado para uma execução e instalação clara e detalhada.
 
 
 
+Função: Trocar Senha
+Utilização:
+Escolha a opção "trocar senha".
+Informe o ID do usuário.
+Informe a senha atual.
+Informe a nova senha desejada.
+Se o usuário existir e a senha atual estiver correta, a senha será atualizada com sucesso. Caso contrário, uma mensagem informando que o usuário não foi encontrado será exibida.
+
+
+Função: Trocar Nome
+Utilização:
+Escolha a opção "trocar nome".
+Informe o ID do usuário.
+Informe a senha atual.
+Informe o novo nome desejado.
+Se o usuário existir e a senha atual estiver correta, o nome será atualizado com sucesso. Caso contrário, uma mensagem informando que o usuário não foi encontrado ou que a senha está incorreta será exibida.
+
+
+Função: Adicionar Avaliacao
+Utilização:
+Escolha a opção "adicionar avaliação".
+Informe o ID do usuário.
+Insira um comentário sobre o serviço.
+Insira uma nota de 1 a 5.
+A avaliação será adicionada ao serviço.
+
+
+Função: Mostrar Avaliacoes
+Utilização:
+Escolha a opção "mostrar avaliações".
+Todas as avaliações armazenadas no serviço serão exibidas.
+
+
+Função: Calcular Media Notas
+Utilização:
+Escolha a opção "calcular média de notas".
+A média das notas de todas as avaliações do serviço será calculada e exibida.
+
+
+Função: Remover Usuario
+Utilização:
+Escolha a opção "remover usuário".
+Informe o nome do usuário a ser removido.
+O usuário com o nome fornecido será removido do sistema.
+
+
+Função: Remover Pagamento
+Utilização:
+Escolha a opção "remover pagamento".
+Informe o ID do pagamento a ser removido.
+O pagamento com o ID fornecido será removido do sistema.
+
+
+Função: mostrarVoos
+Utilização:
+Escolha a opção "mostrar voos".
+Todos os voos disponíveis no sistema serão exibidos.
+
+
+Função: Comprar Voo
+Utilização:
+Escolha a opção "comprar voo".
+Todos os voos disponíveis serão exibidos.
+Anote o ID do voo desejado.
+Informe o ID do usuário.
+Informe o ID do voo desejado.
+Se o usuário e o voo existirem, a compra será realizada com sucesso utilizando o método de pagamento "Cartão de Crédito" e o pagamento será adicionado ao sistema. Caso contrário, mensagens informando que o usuário ou o voo não foram encontrados serão exibidas.
+
+
+Essas instruções permitem que os usuários utilizem as funcionalidades disponíveis de maneira clara e objetiva, guiando-os passo a passo para cada operação.
 
 
 
